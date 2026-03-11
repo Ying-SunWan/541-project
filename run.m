@@ -8,6 +8,13 @@ x = squeeze(vid(:,1,:,20:40));
 d0 = 0.01;
 w0 = ones(l*w,1);
 
+% Normalization
+intensity_max = 3.1622776601683795E+6;
+intensity_min = 3162.2776601683795;
+
+lower_raw = 100000;
+upper_raw = 3.1622776601683792E+7;
+
 % For colormapping the overlay
 cmap = autumn(256);
 R_table = cmap(:,1)';
